@@ -20,7 +20,7 @@
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="Изменить UI"/>
                                 <connections>
-                                    <segue destination="IGo-jn-aba" kind="show" id="EGC-Xw-81y"/>
+                                    <action selector="toSettingsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jMf-A3-hDp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -32,6 +32,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Стартовый экран" id="uFX-JV-bmO"/>
+                    <connections>
+                        <outlet property="settings" destination="PWL-jy-2lq" id="OMZ-SU-ZBp"/>
+                        <outlet property="toSettingsTapped" destination="PWL-jy-2lq" id="esj-1V-YRS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,7 +50,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BF2-fw-YVB">
-                                <rect key="frame" x="20" y="142" width="374" height="67.5"/>
+                                <rect key="frame" x="20" y="64" width="374" height="67.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цвет фона" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WE7-CR-W6Z">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="27.5"/>
@@ -90,7 +94,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9uO-iP-BK4">
-                                <rect key="frame" x="20" y="229.5" width="374" height="67.5"/>
+                                <rect key="frame" x="20" y="151.5" width="374" height="67.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цвет фона кнопки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ll-2a-KVL">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="27.5"/>
@@ -125,7 +129,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8jO-8t-FH5">
-                                <rect key="frame" x="20" y="317" width="374" height="67.5"/>
+                                <rect key="frame" x="20" y="239" width="374" height="67.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цвет текста кнопки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSW-yM-9fC">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="27.5"/>
