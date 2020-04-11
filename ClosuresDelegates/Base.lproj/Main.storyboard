@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f6z-Sv-Idm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Стартовый экран-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClosuresDelegates" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWL-jy-2lq">
+                                <rect key="frame" x="147.5" y="822" width="119" height="40"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Изменить UI"/>
+                                <connections>
+                                    <segue destination="IGo-jn-aba" kind="show" id="EGC-Xw-81y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PWL-jy-2lq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hco-4z-VHm"/>
+                            <constraint firstItem="PWL-jy-2lq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Nhu-wF-ifX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Стартовый экран" id="uFX-JV-bmO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Ngh-bI-zeP">
+            <objects>
+                <viewController id="IGo-jn-aba" customClass="SettingsViewController" customModule="ClosuresDelegates" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5hq-m9-3au">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BF2-fw-YVB">
+                                <rect key="frame" x="20" y="142" width="374" height="67.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цвет фона" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WE7-CR-W6Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Spf-EX-PeU">
+                                        <rect key="frame" x="0.0" y="37.5" width="374" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5y-5m-PKQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="30"/>
+                                                <color key="backgroundColor" red="0.44119244810000002" green="0.1069289222" blue="0.062706328929999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <connections>
+                                                    <action selector="viewBackgroundColorTapped:" destination="IGo-jn-aba" eventType="touchUpInside" id="H5c-e1-q5H"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wd9-CL-3s4">
+                                                <rect key="frame" x="96" y="0.0" width="86" height="30"/>
+                                                <color key="backgroundColor" red="0.2087219656" green="0.43712639809999998" blue="0.28232994680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <connections>
+                                                    <action selector="viewBackgroundColorTapped:" destination="IGo-jn-aba" eventType="touchUpInside" id="Zy4-wT-bIt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uoh-I2-vid">
+                                                <rect key="frame" x="192" y="0.0" width="86" height="30"/>
+                                                <color key="backgroundColor" red="0.94705778360000004" green="0.67416948080000005" blue="0.70588010550000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <connections>
+                                                    <action selector="viewBackgroundColorTapped:" destination="IGo-jn-aba" eventType="touchUpInside" id="Nf5-Bh-WqB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXQ-65-uLA">
+                                                <rect key="frame" x="288" y="0.0" width="86" height="30"/>
+                                                <color key="backgroundColor" red="0.84341974909999995" green="0.55302632510000005" blue="0.22097941509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <connections>
+                                                    <action selector="viewBackgroundColorTapped:" destination="IGo-jn-aba" eventType="touchUpInside" id="vwO-x1-xvf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9uO-iP-BK4">
+                                <rect key="frame" x="20" y="229.5" width="374" height="67.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цвет фона кнопки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ll-2a-KVL">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d3B-Ld-cwX">
+                                        <rect key="frame" x="0.0" y="37.5" width="374" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ko-bC-uf3">
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="buttonBackgroundColorTapped:" destination="IGo-jn-aba" eventType="touchUpInside" id="UZR-43-2yx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m97-T4-cJv">
+                                                <rect key="frame" x="96" y="0.0" width="86" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmJ-p7-rb5">
+                                                <rect key="frame" x="192" y="0.0" width="86" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9N-Gk-do0">
+                                                <rect key="frame" x="288" y="0.0" width="86" height="30"/>
+                                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8jO-8t-FH5">
+                                <rect key="frame" x="20" y="317" width="374" height="67.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цвет текста кнопки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSW-yM-9fC">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QQm-mP-Z4K">
+                                        <rect key="frame" x="0.0" y="37.5" width="374" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGk-Vy-YLa">
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="buttonTintColorTapped:" destination="IGo-jn-aba" eventType="touchUpInside" id="EDV-ev-vCN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wd-8E-5ZS">
+                                                <rect key="frame" x="96" y="0.0" width="86" height="30"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="buttonTintColorTapped:" destination="IGo-jn-aba" eventType="touchUpInside" id="slz-Ug-cbd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9V-tB-Zwg">
+                                                <rect key="frame" x="192" y="0.0" width="86" height="30"/>
+                                                <color key="backgroundColor" red="0.94705778360000004" green="0.67416948080000005" blue="0.70588010550000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <connections>
+                                                    <action selector="buttonTintColorTapped:" destination="IGo-jn-aba" eventType="touchUpInside" id="IPt-mU-V2K"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKa-pa-80z">
+                                                <rect key="frame" x="288" y="0.0" width="86" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.15686274510000001" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <connections>
+                                                    <action selector="buttonTintColorTapped:" destination="IGo-jn-aba" eventType="touchUpInside" id="1FZ-uo-u7y"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wcd-AG-56g" firstAttribute="trailing" secondItem="9uO-iP-BK4" secondAttribute="trailing" constant="20" id="1Qv-a5-Bg3"/>
+                            <constraint firstItem="8jO-8t-FH5" firstAttribute="top" secondItem="9uO-iP-BK4" secondAttribute="bottom" constant="20" id="G54-x0-d17"/>
+                            <constraint firstItem="BF2-fw-YVB" firstAttribute="leading" secondItem="wcd-AG-56g" secondAttribute="leading" constant="20" id="S8C-sa-7Xb"/>
+                            <constraint firstItem="9uO-iP-BK4" firstAttribute="leading" secondItem="wcd-AG-56g" secondAttribute="leading" constant="20" id="Vgg-3e-MR1"/>
+                            <constraint firstItem="9uO-iP-BK4" firstAttribute="top" secondItem="BF2-fw-YVB" secondAttribute="bottom" constant="20" id="gpc-Uo-Z7i"/>
+                            <constraint firstItem="8jO-8t-FH5" firstAttribute="leading" secondItem="wcd-AG-56g" secondAttribute="leading" constant="20" id="jmv-bu-mbm"/>
+                            <constraint firstItem="wcd-AG-56g" firstAttribute="trailing" secondItem="BF2-fw-YVB" secondAttribute="trailing" constant="20" id="quV-Ib-TXN"/>
+                            <constraint firstItem="wcd-AG-56g" firstAttribute="trailing" secondItem="8jO-8t-FH5" secondAttribute="trailing" constant="20" id="sCn-SD-Q6f"/>
+                            <constraint firstItem="BF2-fw-YVB" firstAttribute="top" secondItem="wcd-AG-56g" secondAttribute="top" constant="20" id="tzv-zm-9yM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wcd-AG-56g"/>
+                    </view>
+                    <navigationItem key="navigationItem" prompt="Настройки" id="qFP-A1-GKS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aw2-bQ-aWs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1745" y="115"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Iqg-vr-Rao">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f6z-Sv-Idm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TTp-6m-BpX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NM0-So-LLE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Afn-Mv-NMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </scene>
+    </scenes>
+</document>
