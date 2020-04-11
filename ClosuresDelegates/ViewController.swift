@@ -10,10 +10,9 @@ import UIKit
 
 final class ViewController: UIViewController {
 
-	@IBOutlet private weak var settings: UIButton!
+	private let toSettings = "toSettings"
 
-	@IBAction private func toSettingsTapped(_ sender: UIButton) {
-	}
+	@IBOutlet private weak var settings: UIButton!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
